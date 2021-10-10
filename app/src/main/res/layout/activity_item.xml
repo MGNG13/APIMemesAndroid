@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemActivity"
+    tools:ignore="HardcodedText">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/itemactivity_cardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#EFEFEF"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <VideoView
+                android:id="@+id/itemactivity_videoView"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_gravity="center"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/itemactivity_imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                tools:ignore="ContentDescription" />
+
+            <ProgressBar
+                android:id="@+id/itemactivity_progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/itemactivity_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/actor"
+            android:textAlignment="viewStart"
+            android:textColor="#FF8400"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/itemactivity_cardView"
+            app:layout_constraintStart_toStartOf="@+id/itemactivity_cardView"
+            app:layout_constraintTop_toBottomOf="@+id/itemactivity_cardView" />
+
+        <TextView
+            android:id="@+id/itemactivity_textViewType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/actor"
+            android:textAlignment="viewStart"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/itemactivity_cardView"
+            app:layout_constraintStart_toStartOf="@+id/itemactivity_cardView"
+            app:layout_constraintTop_toBottomOf="@+id/itemactivity_textView" />
+
+        <Button
+            android:id="@+id/itemactivity_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="230dp"
+            android:backgroundTint="@color/ic_launcher_background"
+            android:fontFamily="@font/actor"
+            android:text="Copiar link"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:cornerRadius="15dp"
+            app:icon="@drawable/copy"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemactivity_textViewType"
+            app:layout_constraintVertical_bias="0.0"
+            app:rippleColor="@color/purple_500" />
+
+        <Button
+            android:id="@+id/itemactivity_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/ic_launcher_background"
+            android:fontFamily="@font/actor"
+            android:text="Descargar"
+            android:textStyle="bold"
+            app:cornerRadius="15dp"
+            app:icon="@drawable/download"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemactivity_button"
+            app:rippleColor="@color/purple_500" />
+
+        <Button
+            android:id="@+id/itemactivity_button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/ic_launcher_background"
+            android:fontFamily="@font/actor"
+            android:text="Compartir a whatsapp"
+            android:textStyle="bold"
+            app:cornerRadius="15dp"
+            app:icon="@drawable/share"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemactivity_button2"
+            app:layout_constraintVertical_bias="0.35"
+            app:rippleColor="@color/purple_500" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

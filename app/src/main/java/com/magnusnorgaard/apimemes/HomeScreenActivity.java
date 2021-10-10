@@ -348,12 +348,12 @@ public class HomeScreenActivity extends AppCompatActivity {
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                     if (!s.toString().contains(APIMemes.URL)){
                         if (!s.toString().contains(APIMemes.URL2)){
-                            onClickDialog(1, button, null, editText);
+                            onClickDialog(1, button, null, editText, dialog);
                         } else {
-                            onClickDialog(0, button, s, null);
+                            onClickDialog(0, button, s, null, dialog);
                         }
                     } else {
-                        onClickDialog(0, button, s, null);
+                        onClickDialog(0, button, s, null, dialog);
                     }
                 }
 
@@ -366,7 +366,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void onClickDialog(int state, Button button, CharSequence s, EditText editText){
+    private void onClickDialog(int state, Button button, CharSequence s, EditText editText, Dialog dialog){
         if (state == 0){
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
